@@ -1,0 +1,1 @@
+require "pushcar/channel/in_memory"
