@@ -31,7 +31,7 @@ module Pushcar
     private
     def on_start
       EM.add_periodic_timer(@ping_interval) { Transport.ping_all }
-      self.started = true
+      @started = true
     end
   end
 end
