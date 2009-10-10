@@ -2,7 +2,6 @@ require 'singleton'
 module Pushcar
   class App
     include Singleton
-    ASYNC_CALLBACK = "async.callback".freeze
     
     attr_reader :ping_interval, :started
     
@@ -26,7 +25,7 @@ module Pushcar
       
       Channel::InMemory.instance.subscribe channel, session, transport
 
-      EM.next_tick { request.env[ASYNC_CALLBACK].call transport.render }
+      EM.next_tick { request.env["async.callback"].call transport.render }
     end
     
     private
