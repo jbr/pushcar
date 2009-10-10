@@ -1,7 +1,7 @@
 Pushcar
 ========
 
-This is a derivative work.  All of the hard stuff was done by macournoyer for pusher (http://github.com/macournoyer/pusher).
+This is a derivative work.  All of the hard stuff was done by macournoyer for pusher ( http://github.com/macournoyer/pusher ).
 
 I've been hacking it up to make it entirely within Rails, instead of as middleware, and making the interface more Rails-ey.
 The advantage of this is that you can mix comet endpoints into your app and place them behind authentication, etc.
