@@ -21,7 +21,11 @@ module Pushcar
       end
       
       def publish(channel_id, message)
-        queues[channel_id].each{|sid, transports| transports.each{|e| e.write message } }
+        queue = queues[channel_id]
+        
+        if queue && queue.size > 0
+          queue.values.flatten.each{|transport| transport.write message }
+        end
       end
     end
   end

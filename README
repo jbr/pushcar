@@ -5,3 +5,6 @@ This is a derivative work.  All of the hard stuff was done by macournoyer for pu
 
 I've been hacking it up to make it entirely within Rails, instead of as middleware, and making the interface more Rails-ey.
 The advantage of this is that you can mix comet endpoints into your app and place them behind authentication, etc.
+
+
+Right now, the message queue is in-memory and blocking.  Stupid and unscalable, but it works for now.  The strategy was "get something working, settle the API, then improve internals."  Hang in there.
